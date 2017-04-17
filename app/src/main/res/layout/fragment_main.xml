@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.pauline.easyvoting.MainActivity">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin" />
+
+    <ImageView
+        android:id="@+id/IView"
+        android:layout_width="369dp"
+        android:layout_height="188dp"
+        android:layout_gravity="center"
+        android:background="@drawable/draw6"
+        android:paddingTop="0dp"
+        android:textColor="#993366"
+        android:textSize="70dp"
+        android:layout_marginBottom="36dp"
+        android:layout_above="@+id/buttonStartVoting"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonStartVoting"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:shadowColor="#000"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:text="START VOTING"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="95dp" />
+
+</RelativeLayout>

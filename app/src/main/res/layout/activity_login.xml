@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="100dp"
+    tools:context="com.example.pauline.easyvoting.Login"
+    android:background="@drawable/draw1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linearLayout">
+
+                <EditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Email"
+                    android:textAlignment="center"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/passwordEditText"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Password"
+                    android:textAlignment="center"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@+id/passwordEditText"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#000000"
+                    android:textSize="20sp" />
+
+
+                <Button
+                    android:id="@+id/passwordLoginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Log in"
+                    android:background="#993366"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Don't have an account? Sign up here!"
+                    android:id="@+id/registerTextView"
+                    android:layout_gravity="center_horizontal" />
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:text="log in as admin !"
+                android:id="@+id/adminTextView"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

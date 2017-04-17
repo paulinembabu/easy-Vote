@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "830007916786",
+    "firebase_url": "https://easyvoting-5f297.firebaseio.com",
+    "project_id": "easyvoting-5f297",
+    "storage_bucket": "easyvoting-5f297.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830007916786:android:156495adcc80a00f",
+        "android_client_info": {
+          "package_name": "com.example.pauline.easyvoting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830007916786-nj1bav919j8379f4mo70rhk8ba8vasl2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pauline.easyvoting",
+            "certificate_hash": "1de463fd040bc9d88c72bc980d03d99b58dcc0b5"
+          }
+        },
+        {
+          "client_id": "830007916786-k1oo190q9hp5ndthkq4o9banav31n9ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdHEcfyMuAGNgQqHGOqGAsUCBwvPVqGtc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830007916786-k1oo190q9hp5ndthkq4o9banav31n9ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
