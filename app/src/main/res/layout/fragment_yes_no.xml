@@ -1,10 +1,19 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pauline.easyvoting.yes_no">
+    tools:context="com.example.pauline.easyvoting.ui.yes_no">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/yesnofrag"
+       >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
@@ -23,6 +32,7 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_blue_light"
                 android:layout_weight="1.0"
+                android:textSize="20dp"
                 android:text="YES" />
 
             <Button
@@ -31,6 +41,7 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_red_light"
                 android:layout_weight="1.0"
+                android:textSize="20dp"
                 android:text="NO" />
 
         </LinearLayout>
@@ -43,25 +54,23 @@
 
             android:orientation="horizontal" >
 
-            <Button
-                android:id="@+id/AbstButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
-                android:layout_weight="1.0"
-                android:text="ABST" />
 
-            <Button
-                android:id="@+id/button4"
+            <TextView
+                android:id="@+id/textCounter"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_light"
-                android:layout_weight="1.0"
-                android:text="Button" />
+                android:layout_weight="5.0"
+                android:textAlignment="center"
+                android:text="counter"
+                android:textSize="30dp"
+                android:gravity="center"/>
 
         </LinearLayout>
 
 
     </LinearLayout>
 
-</FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>

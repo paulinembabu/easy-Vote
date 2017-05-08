@@ -1,28 +1,56 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/draw8"
-    tools:context="com.example.pauline.easyvoting.question">
+    android:id="@+id/question"
+    tools:context="com.example.pauline.easyvoting.ui.question">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+            <TextView
         android:id="@+id/questionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="38dp"
+        android:textAlignment="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:layout_marginTop="100dp"
         android:textColor="#fff"
-        android:text="Voting issue goes here" />
+        android:text="Nothing Yet!!!!" />
 
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    </FrameLayout>
     <Button
         android:id="@+id/buttonVote"
         android:layout_width="280dp"
         android:layout_height="59dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="450dp"
         android:background="#993366"
         android:text="VOTE"
         android:textSize="30dp" />
 
-</FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

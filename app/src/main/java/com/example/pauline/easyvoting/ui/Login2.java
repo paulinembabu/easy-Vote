@@ -1,4 +1,4 @@
-package com.example.pauline.easyvoting;
+package com.example.pauline.easyvoting.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,8 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.pauline.easyvoting.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -20,34 +21,27 @@ import com.google.firebase.auth.FirebaseUser;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class Login2 extends AppCompatActivity implements View.OnClickListener {
 
     public static final String TAG = Login.class.getSimpleName();
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mAuthProgressDialog;
 
-    @Bind(R.id.passwordLoginButton)
-    Button mPasswordLoginButton;
-    @Bind(R.id.emailEditText)
-    EditText mEmailEditText;
-    @Bind(R.id.passwordEditText) EditText mPasswordEditText;
-    @Bind(R.id.registerTextView)
-    TextView mRegisterTextView;
-    @Bind(R.id.adminTextView)TextView mAdminLogin;
+    @Bind(R.id.adminpasswordLoginButton) Button mPasswordLoginButton;
+    @Bind(R.id.adminemailEditText) EditText mEmailEditText;
+    @Bind(R.id.adminpasswordEditText) EditText mPasswordEditText;
 
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login2);
         ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
 
-        mRegisterTextView.setOnClickListener(this);
         mPasswordLoginButton.setOnClickListener(this);
-        mAdminLogin.setOnClickListener(this);
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
 
@@ -55,7 +49,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    Intent intent = new Intent(Login2.this, admin.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
@@ -87,21 +81,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if (view == mRegisterTextView) {
-            Intent intent = new Intent(Login.this, signUp.class);
-            startActivity(intent);
-            finish();
-        }
 
         if (view == mPasswordLoginButton) {
             loginWithPassword();
 //                Toast.makeText(LoginActivity.this, "here!", Toast.LENGTH_SHORT).show();
-        }
-
-        if (view == mAdminLogin) {
-            Intent intent = new Intent(Login.this, Login2.class);
-            startActivity(intent);
-            finish();
         }
 
     }
@@ -129,7 +112,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail", task.getException());
-                            Toast.makeText(Login.this, "Authentication failed.",
+                            Toast.makeText(Login2.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

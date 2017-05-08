@@ -1,10 +1,11 @@
-package com.example.pauline.easyvoting;
+package com.example.pauline.easyvoting.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.pauline.easyvoting.R;
 
 
 public class Splash extends AppCompatActivity {

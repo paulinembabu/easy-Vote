@@ -1,6 +1,5 @@
-package com.example.pauline.easyvoting;
+package com.example.pauline.easyvoting.ui;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pauline.easyvoting.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -41,23 +41,21 @@ public class admin extends AppCompatActivity implements View.OnClickListener {
 
         if (v == mSubmit) {
             String issue = mIssue.getText().toString();
-            mIssue.setVisibility(View.INVISIBLE);
+
 
 
             DatabaseReference adminRef = FirebaseDatabase
                     .getInstance()
-                    .getReference();
+                    .getReference("issue").child("saidVotingMatter");
 
 
            adminRef.push().setValue(issue);
 
-//           Bundle bundle = new Bundle();
-//            bundle.putString(issue,"issue");
-//            question qstn = new question();
-//            qstn.setArguments(bundle);
+
 
 
             Toast.makeText(admin.this, "saved", Toast.LENGTH_SHORT).show();
+            mIssue.setText("");
 
 
         }
